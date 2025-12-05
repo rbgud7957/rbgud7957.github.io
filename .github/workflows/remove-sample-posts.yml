@@ -1,0 +1,36 @@
+name: Remove Sample Posts
+
+on:
+  workflow_dispatch:  
+  push:
+    paths:
+      - "_posts/**"
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete sample posts
+        run: |
+          echo "Removing Chirpy default posts..."
+
+          # 제거할 기본 포스트 파일들
+          rm -f _posts/*welcome-to-jekyll*.md
+          rm -f _posts/*layout-header-video*.md
+          rm -f _posts/*exclude-post*.md
+          rm -f _posts/*lorem*.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Auto-remove sample posts" || echo "No changes to commit"
+
+      - name: Push changes
+        run: |
+          git push
