@@ -22,7 +22,7 @@ categories: ["Project", "Review"]
 ## ⚙️ 2. 기술 스택  
 
 ### 💻 Frontend  
-- **Next.js ** (App Router 기반 라우팅 구조)  
+- **Next.js** (App Router 기반 라우팅 구조)  
 - **Axios** (API 연동, 인터셉터로 JWT 자동 주입)  
 - **Tailwind CSS** (빠른 스타일링과 반응형 UI 구성)
 
@@ -135,4 +135,5 @@ MongoDB, Express, Next.js가 함께 동작하는 전체 흐름을 직접 구성�
 풀스택 개발자로서 한 단계 성장한 프로젝트였습니다.
 
 ---
+
 
